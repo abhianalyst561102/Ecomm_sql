@@ -74,7 +74,8 @@ WHERE SALES > 100 AND RATING < 3 ;
 
 --- Which products have a price between $50 and $200 and were added in the last 6 months?
 SELECT PRODUCTNAME, PRICE, DATEADDED FROM ECOM
-WHERE PRICE BETWEEN 50 AND 200;
+WHERE PRICE BETWEEN 50 AND 200
+AND DateAdded >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH);;
 
 
 
